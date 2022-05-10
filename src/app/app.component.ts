@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'calc';
+  result = '';
+
+  handleClick(item:any){
+    this.result += item;
+  }
+
+  handleEqual(){
+    this.result = eval(this.result).toFixed(2);
+  }
+
+  handleRest(){
+    this.result = '';
+  }
 }
